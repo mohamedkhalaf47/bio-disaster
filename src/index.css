@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Outfit", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  
+  --color-brand-primary: #2c643c; /* Forest Green */
+  --color-brand-secondary: #51b56d; /* Leaf Green */
+  --color-brand-accent: #f5ca6e; /* Golden Yellow */
+  --color-brand-background: #fcfdfc;
+  --color-brand-surface: #ffffff;
+  --color-brand-border: #e8ece8;
+  --color-brand-text: #1a261d;
+  --color-brand-muted: #6b7a6e;
+}
+
+@layer base {
+  body {
+    @apply bg-brand-background text-brand-text font-sans selection:bg-brand-primary selection:text-white;
+  }
+}
+
+.chemical-formula {
+  @apply font-mono text-sm tracking-tight;
+}
+
+.gradient-text {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-brand-primary to-brand-secondary;
+}
+
+.card-shine {
+  @apply relative overflow-hidden;
+}
+
+.card-shine::after {
+  content: "";
+  @apply absolute top-0 right-0 w-64 h-64 bg-brand-primary/5 rounded-full -mr-20 -mt-20 blur-3xl opacity-50;
+}

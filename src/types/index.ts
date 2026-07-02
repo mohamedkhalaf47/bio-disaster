@@ -72,6 +72,7 @@ export interface QuoteFormData {
 	products: string[];
 	volume: string;
 	email: string;
+	phone: string;
 	notes: string;
 }
 
@@ -86,4 +87,11 @@ export interface SiteInfo {
 	organization: string;
 	university: string;
 	badgeText: string;
+}
+
+export interface QuarterlyTarget {
+	quarter: string;
+	hubs: number;
+	revenue: number;
+	profit: number;
 }

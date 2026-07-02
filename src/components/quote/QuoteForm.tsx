@@ -3,8 +3,7 @@ import { motion } from 'motion/react';
 import { CheckCircle2 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { Card } from '@/components/ui/Card';
-import { SectionTitle } from '@/components/ui/SectionTitle';
-import { AVAILABLE_PRODUCTS, QUOTE_FORM_CONTENT } from '@/config/data';
+import { AVAILABLE_PRODUCTS } from '@/config/data';
 import type { Quote, QuoteFormData, ClientType } from '@/types';
 
 interface QuoteFormProps {
@@ -19,6 +18,7 @@ export const QuoteForm = ({ onSubmit, onCancel }: QuoteFormProps) => {
     products: [],
     volume: '',
     email: '',
+    phone: '',
     notes: '',
   });
 
@@ -48,17 +48,12 @@ export const QuoteForm = ({ onSubmit, onCancel }: QuoteFormProps) => {
   };
 
   return (
-    <div className="pt-32 pb-20 px-6 min-h-screen bg-brand-background">
+    <div className="pb-10">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        className="max-w-3xl mx-auto"
+        className="w-full"
       >
-        <div className="mb-12">
-          <SectionTitle className="mb-4">{QUOTE_FORM_CONTENT.title}</SectionTitle>
-          <p className="text-slate-500 font-medium">{QUOTE_FORM_CONTENT.description}</p>
-        </div>
-
         <Card className="p-10">
           <form onSubmit={handleSubmit} className="space-y-8">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -139,6 +134,19 @@ export const QuoteForm = ({ onSubmit, onCancel }: QuoteFormProps) => {
               </div>
               <div className="space-y-2">
                 <label className="text-xs font-black uppercase tracking-widest text-slate-400">
+                  Phone / WhatsApp
+                </label>
+                <input
+                  required
+                  type="tel"
+                  value={formData.phone}
+                  onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                  className="w-full h-14 px-6 rounded-2xl bg-slate-50 border border-slate-200 focus:border-brand-primary outline-none transition-all font-bold placeholder:text-slate-300"
+                  placeholder="e.g. 01012345678"
+                />
+              </div>
+              <div className="space-y-2">
+                <label className="text-xs font-black uppercase tracking-widest text-slate-400">
                   Monthly Volume (Liters/Units)
                 </label>
                 <input
@@ -159,7 +167,7 @@ export const QuoteForm = ({ onSubmit, onCancel }: QuoteFormProps) => {
               <textarea
                 value={formData.notes}
                 onChange={(e) => setFormData({ ...formData, notes: e.target.value })}
-                className="w-full min-h-30 p-6 rounded-2xl bg-slate-50 border border-slate-200 focus:border-brand-primary outline-none transition-all font-bold placeholder:text-slate-300 resize-none"
+                className="w-full min-h-[120px] p-6 rounded-2xl bg-slate-50 border border-slate-200 focus:border-brand-primary outline-none transition-all font-bold placeholder:text-slate-300 resize-none"
                 placeholder="Details about your delivery schedule or specific engine compatibility needs..."
               />
             </div>
@@ -167,7 +175,7 @@ export const QuoteForm = ({ onSubmit, onCancel }: QuoteFormProps) => {
             <div className="flex flex-col sm:flex-row gap-4 pt-4 border-t border-slate-100">
               <button
                 type="submit"
-                className="grow h-16 bg-brand-primary text-white rounded-2xl font-bold shadow-xl shadow-brand-primary/20 hover:scale-[1.02] transition-all flex items-center justify-center gap-2"
+                className="flex-grow h-16 bg-brand-primary text-white rounded-2xl font-bold shadow-xl shadow-brand-primary/20 hover:scale-[1.02] transition-all flex items-center justify-center gap-2"
               >
                 Submit Request <CheckCircle2 size={20} />
               </button>

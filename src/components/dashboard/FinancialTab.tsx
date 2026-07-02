@@ -1,8 +1,13 @@
-import { TrendingUp, DollarSign, PieChart } from "lucide-react";
+import { TrendingUp, Wallet, PieChart } from "lucide-react";
 import { motion } from "motion/react";
 import { cn } from "@/lib/utils";
 import { Card } from "@/components/ui/Card";
-import { FINANCIAL_DATA, DASHBOARD_KPIS, REVENUE_STREAMS } from "@/config/data";
+import { VisitCounter } from "./VisitCounter";
+import {
+	QUARTERLY_TARGETS,
+	DASHBOARD_KPIS,
+	REVENUE_STREAMS,
+} from "@/config/data";
 
 export const FinancialTab = () => (
 	<motion.div
@@ -16,10 +21,10 @@ export const FinancialTab = () => (
 			<Card>
 				<div className="flex justify-between items-center mb-8">
 					<h3 className="text-xl font-extrabold tracking-tight">
-						Monthly Performance
+						Quarterly Roadmap
 					</h3>
 					<div className="text-xs font-bold text-slate-400 uppercase tracking-widest">
-						Year to Date
+						Targets, not actuals
 					</div>
 				</div>
 				<div className="overflow-x-auto">
@@ -27,34 +32,34 @@ export const FinancialTab = () => (
 						<thead>
 							<tr className="border-b border-slate-100">
 								<th className="pb-4 text-xs font-black uppercase tracking-widest text-slate-400">
-									Month
+									Quarter
+								</th>
+								<th className="pb-4 text-xs font-black uppercase tracking-widest text-slate-400">
+									Active Hubs
 								</th>
 								<th className="pb-4 text-xs font-black uppercase tracking-widest text-slate-400">
 									Revenue
 								</th>
-								<th className="pb-4 text-xs font-black uppercase tracking-widest text-slate-400">
-									Op. Costs
-								</th>
 								<th className="pb-4 text-xs font-black uppercase tracking-widest text-slate-400 text-right">
-									Net Savings
+									Net Profit
 								</th>
 							</tr>
 						</thead>
 						<tbody className="divide-y divide-slate-50">
-							{FINANCIAL_DATA.map((data) => (
+							{QUARTERLY_TARGETS.map((q) => (
 								<tr
-									key={data.name}
+									key={q.quarter}
 									className="hover:bg-slate-50/50 transition-colors"
 								>
-									<td className="py-4 font-bold text-slate-900">{data.name}</td>
+									<td className="py-4 font-bold text-slate-900">{q.quarter}</td>
 									<td className="py-4 font-mono text-sm text-slate-600">
-										${data.revenue.toLocaleString()}
+										{q.hubs}
 									</td>
 									<td className="py-4 font-mono text-sm text-slate-600">
-										${data.costs.toLocaleString()}
+										EGP {q.revenue.toLocaleString()}
 									</td>
 									<td className="py-4 text-right font-black font-mono text-brand-primary">
-										${data.savings.toLocaleString()}
+										EGP {q.profit.toLocaleString()}
 									</td>
 								</tr>
 							))}
@@ -63,46 +68,47 @@ export const FinancialTab = () => (
 				</div>
 			</Card>
 
-			<div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+			<div className="grid grid-cols-1 md:grid-cols-3 gap-8">
 				<Card>
 					<div className="flex items-center justify-between mb-6">
 						<div className="p-3 bg-brand-secondary/10 text-brand-secondary rounded-xl">
 							<TrendingUp size={24} />
 						</div>
 						<span className="text-xs font-bold text-brand-secondary bg-brand-secondary/10 px-2 py-1 rounded-lg">
-							{DASHBOARD_KPIS.efficiencyGain.change}
+							{DASHBOARD_KPIS.currentRevenue.change}
 						</span>
 					</div>
 					<p className="text-slate-500 text-sm font-bold uppercase tracking-widest mb-1">
-						Efficiency Gain
+						{DASHBOARD_KPIS.currentRevenue.label}
 					</p>
 					<h4 className="text-3xl font-black tracking-tighter text-slate-900">
-						{DASHBOARD_KPIS.efficiencyGain.value}
+						{DASHBOARD_KPIS.currentRevenue.value}
 					</h4>
 				</Card>
 				<Card>
 					<div className="flex items-center justify-between mb-6">
 						<div className="p-3 bg-brand-primary/10 text-brand-primary rounded-xl">
-							<DollarSign size={24} />
+							<Wallet size={24} />
 						</div>
 						<span className="text-xs font-bold text-slate-400 bg-slate-50 px-2 py-1 rounded-lg">
-							{DASHBOARD_KPIS.netSavings.target}
+							{DASHBOARD_KPIS.currentProfit.change}
 						</span>
 					</div>
 					<p className="text-slate-500 text-sm font-bold uppercase tracking-widest mb-1">
-						Net Savings
+						{DASHBOARD_KPIS.currentProfit.label}
 					</p>
 					<h4 className="text-3xl font-black tracking-tighter text-slate-900">
-						{DASHBOARD_KPIS.netSavings.value}
+						{DASHBOARD_KPIS.currentProfit.value}
 					</h4>
 				</Card>
+				<VisitCounter />
 			</div>
 		</div>
 
 		<div className="space-y-8">
 			<Card>
 				<h3 className="text-lg font-extrabold tracking-tight mb-6 text-brand-primary">
-					Revenue Breakdown
+					Revenue Breakdown (Q1)
 				</h3>
 				<div className="space-y-6">
 					{REVENUE_STREAMS.map((stream, idx) => (

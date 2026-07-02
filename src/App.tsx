@@ -7,7 +7,8 @@ import { ProcessPage } from "@/pages/ProcessPage";
 import { NetworkPage } from "@/pages/NetworkPage";
 import { ImpactPage } from "@/pages/ImpactPage";
 import { DashboardPage } from "@/pages/DashboardPage";
-import { QuotesRequestPage } from "@/pages/QuotesRequestPage";
+import { QuoteRequestPage } from "@/pages/QuoteRequestPage";
+import { initAnalytics } from "@/lib/analytics";
 
 function ScrollToTop() {
 	const { pathname } = useLocation();
@@ -18,6 +19,10 @@ function ScrollToTop() {
 }
 
 export default function App() {
+	useEffect(() => {
+		initAnalytics();
+	}, []);
+
 	return (
 		<div className="antialiased font-sans flex flex-col min-h-screen">
 			<ScrollToTop />
@@ -29,7 +34,7 @@ export default function App() {
 					<Route path="/network" element={<NetworkPage />} />
 					<Route path="/impact" element={<ImpactPage />} />
 					<Route path="/dashboard" element={<DashboardPage />} />
-					<Route path="/quote-request" element={<QuotesRequestPage />} />
+					<Route path="/quote-request" element={<QuoteRequestPage />} />
 				</Routes>
 			</main>
 			<Footer />

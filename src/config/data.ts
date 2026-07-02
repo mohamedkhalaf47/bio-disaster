@@ -30,7 +30,7 @@ export const SITE_INFO: SiteInfo = {
 	tagline: "Turning Waste into Clean Energy.",
 	organization: "Enactus Assiut University",
 	university: "Assiut University",
-	badgeText: "Enactus Assiut — Est. March 2025",
+	badgeText: "Enactus Assiut — Est. Feb 2025",
 };
 
 // ------------------------------------------------------------
@@ -38,7 +38,7 @@ export const SITE_INFO: SiteInfo = {
 // ------------------------------------------------------------
 export const NAV_LINKS: NavLink[] = [
 	{ name: "Home", path: "/" },
-	{ name: "Process", path: "/process" },
+	{ name: "Solution", path: "/process" },
 	{ name: "Network", path: "/network" },
 	{ name: "Impact", path: "/impact" },
 	{ name: "Dashboard", path: "/dashboard" },
@@ -50,13 +50,13 @@ export const NAV_LINKS: NavLink[] = [
 export const HERO_CONTENT = {
 	headlinePrefix: "Turning waste oil into",
 	headlineHighlight: "clean fuel",
-	headlineSuffix: "for Assiut.",
+	headlineSuffix: "for Egypt.",
 	description:
-		"BioDiesel recycles Used Cooking Oil (UCO) from households, restaurants, and hotels into high-quality biodiesel — reducing pollution and powering a circular economy in Assiut.",
+		"BioDiesel recycles Used Cooking Oil (UCO) from households, restaurants, and hotels into high-quality biodiesel — reducing pollution and powering a circular economy, one governorate at a time.",
 	imageUrl:
 		"https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?q=80&w=1470&auto=format&fit=crop",
-	imageCaptionLabel: "Country of Impact",
-	imageCaptionValue: "Assiut, Egypt",
+	imageCaptionLabel: "Expanding Across",
+	imageCaptionValue: "Egypt",
 	trustedByLabel: "Aligned with",
 };
 
@@ -68,31 +68,32 @@ export const CTA_CONTENT = {
 	headlineHighlight: "circular economy",
 	headlineSuffix: "today.",
 	description:
-		"Partner with BioDiesel to recycle your waste cooking oil, reduce emissions, and contribute to a cleaner Assiut. Restaurants, hotels, and households welcome.",
+		"Partner with BioDiesel to recycle your waste cooking oil, reduce emissions, and contribute to a cleaner Egypt. Restaurants, hotels, and households welcome.",
 };
 
 // ------------------------------------------------------------
-// Process Section — "The Chemistry of Change"
+// Process / Solution Section
 // ------------------------------------------------------------
 export const PROCESS_INTRO = {
-	eyebrow: "The Science",
-	title: "The Chemistry of Change",
+	eyebrow: "Our Solution",
+	title: "From Waste to Worth",
 	description:
-		"Our process uses Transesterification — triglycerides in waste oil react with methanol under NaOH or KOH catalyst, producing clean biodiesel and valuable glycerol as a byproduct.",
+		"We collect used cooking oil that would otherwise pollute water systems, and turn it into clean, usable biodiesel — closing the loop on a wasted resource.",
 };
 
 export const PROCESS_STEPS: ProcessStep[] = [
 	{
 		iconName: "Droplet",
 		title: "The Inputs",
-		desc: "Used Cooking Oil (UCO) collected from restaurants, hotels, and households — combined with methanol under controlled conditions.",
-		detail: "Optimized for triglycerides recovery.",
+		desc: "Used Cooking Oil (UCO) collected from restaurants, hotels, and households across our partner network.",
+		detail: "Sourced responsibly, tracked every step.",
 	},
+
 	{
 		iconName: "FlaskConical",
-		title: "The Reaction",
-		desc: "Transesterification triggered by NaOH or KOH catalyst under controlled temperature and mixing conditions.",
-		detail: "Monitored at constant temperature.",
+		title: "The Processing",
+		desc: "Collected oil moves through our processing facility, where it's refined into clean, ready-to-use biodiesel.",
+		detail: "Quality-checked at every stage.",
 	},
 	{
 		iconName: "Leaf",
@@ -109,7 +110,7 @@ export const NETWORK_INTRO = {
 	eyebrow: "The Collection Model",
 	title: "Hub & Spoke Strategy",
 	description:
-		"Waste oil is spread across Assiut. Our Hub & Spoke model connects restaurants, franchise chains, and households (spokes) to a central processing unit (hub) — ensuring a consistent, scalable supply.",
+		"Waste oil is spread across every city we operate in. Our Hub & Spoke model connects restaurants, franchise chains, and households (spokes) to a central processing unit (hub) in each region — ensuring a consistent, scalable supply.",
 };
 
 export const NETWORK_NODES: NetworkNode[] = [
@@ -149,7 +150,7 @@ export const NETWORK_BENEFITS: NetworkBenefit[] = [
 		tag: "03",
 		text: "Signed agreements & log sheets track every collection point",
 	},
-	{ tag: "04", text: "Scalable infrastructure — designed to grow with Assiut" },
+	{ tag: "04", text: "Scalable infrastructure — a new hub every 3 months" },
 ];
 
 // ------------------------------------------------------------
@@ -200,31 +201,24 @@ export const FINANCIAL_DATA: FinancialMonth[] = [
 	{ name: "Jul", revenue: 3490, costs: 4300, savings: 2100 },
 ];
 
+// ------------------------------------------------------------
+// Dashboard — Financial Tab (Real quarterly targets, EGP)
+// ------------------------------------------------------------
+export const QUARTERLY_TARGETS = [
+  { quarter: 'Q1', hubs: 1, revenue: 624000, profit: 232140 },
+  { quarter: 'Q2', hubs: 2, revenue: 1248000, profit: 464280 },
+  { quarter: 'Q3–Q4', hubs: 3, revenue: 1872000, profit: 696420 },
+];
+
 export const DASHBOARD_KPIS = {
-	efficiencyGain: { value: "89.4%", change: "+12.5%" },
-	netSavings: { value: "$42,850", target: "Target: $50k" },
-	goalStatusPercent: 92,
+  currentRevenue: { value: 'EGP 624,000', label: 'Q1 Revenue Target', change: '+100% by Q2' },
+  currentProfit: { value: 'EGP 232,140', label: 'Q1 Net Profit Target', change: '+200% by Q3–Q4' },
+  goalStatusPercent: 92,
 };
 
 export const REVENUE_STREAMS: RevenueStream[] = [
-	{
-		label: "B20 Commercial",
-		amount: "$24,103",
-		percentWidth: "65%",
-		colorVariant: "primary",
-	},
-	{
-		label: "B100 Industrial",
-		amount: "$12,450",
-		percentWidth: "35%",
-		colorVariant: "primary",
-	},
-	{
-		label: "Glycerin Products",
-		amount: "$6,297",
-		percentWidth: "15%",
-		colorVariant: "accent",
-	},
+  { label: 'B20 Commercial', amount: 'EGP 468,000', percentWidth: '75%', colorVariant: 'primary' },
+  { label: 'Glycerin Products', amount: 'EGP 156,000', percentWidth: '25%', colorVariant: 'accent' },
 ];
 
 // ------------------------------------------------------------
@@ -239,7 +233,7 @@ export const LOYALTY_INFO = {
 };
 
 export const LOYALTY_EARNINGS: LoyaltyEarning[] = [
-	{ label: "B100 Delivery", points: "+150", date: "Oct 24" },
+	{ label: "B20 Blend Delivery", points: "+150", date: "Oct 24" },
 	{ label: "UCO Collection", points: "+85", date: "Oct 21" },
 	{ label: "Glycerin Wholesale", points: "+45", date: "Oct 15" },
 ];
@@ -252,7 +246,7 @@ export const LOYALTY_EARNINGS: LoyaltyEarning[] = [
 export const SEED_QUOTES: Quote[] = [
 	{
 		id: "QT-001",
-		client: "Local Restaurant — Assiut",
+		client: "Local Restaurant Partner",
 		status: "Pending",
 		date: new Date().toLocaleDateString(),
 		amount: "—",
@@ -268,7 +262,7 @@ export const SEED_QUOTES: Quote[] = [
 	},
 	{
 		id: "QT-003",
-		client: "Franchise Chain — Assiut",
+		client: "Franchise Chain Partner",
 		status: "Draft",
 		date: new Date().toLocaleDateString(),
 		amount: "—",
@@ -287,7 +281,6 @@ export const SEED_QUOTES: Quote[] = [
 export const AVAILABLE_PRODUCTS: string[] = [
 	"UCO Collection Service (we collect your waste oil)",
 	"B20 Biodiesel Blend (supply)",
-	"B100 Pure Biodiesel (supply)",
 	"Glycerol Byproduct",
 	"Awareness & Training Partnership",
 ];
@@ -298,7 +291,7 @@ export const AVAILABLE_PRODUCTS: string[] = [
 export const QUOTE_FORM_CONTENT = {
 	title: "Become a Partner",
 	description:
-		"Fill in your details to join our collection network or request biodiesel supply. We work with restaurants, hotels, households, and businesses across Assiut.",
+		"Fill in your details to join our collection network or request biodiesel supply. We work with restaurants, hotels, households, and businesses across Egypt.",
 };
 
 // ------------------------------------------------------------
@@ -306,10 +299,10 @@ export const QUOTE_FORM_CONTENT = {
 // ------------------------------------------------------------
 export const FOOTER_CONTENT = {
 	description:
-		"An Enactus Assiut University project — converting Used Cooking Oil into clean biodiesel for a sustainable Assiut. Started March 2025.",
+		"An Enactus Assiut University project — converting Used Cooking Oil into clean biodiesel, expanding to a new region every 3 months. Started Feb 2025.",
 	loyaltyTitle: "Partner With Us",
 	loyaltyDescription:
-		"Whether you're a restaurant, hotel, or household — join our collection network, contribute waste oil, and be part of Assiut's circular economy.",
+		"Whether you're a restaurant, hotel, or household — join our collection network, contribute waste oil, and be part of a growing circular economy.",
 	copyright: `© ${new Date().getFullYear()} BioDiesel • Enactus Assiut University`,
 };
 
@@ -398,6 +391,16 @@ export const BENEFICIARIES = [
 ];
 
 // ------------------------------------------------------------
+// Impact Page — Growth Roadmap (Hub expansion + financial scaling)
+// ------------------------------------------------------------
+export const GROWTH_ROADMAP_INTRO = {
+  eyebrow: 'Where We\'re Headed',
+  title: 'A clear path to scale',
+  description:
+    'Our roadmap isn\'t just ambition — it\'s a quarter-by-quarter plan for expanding our hub network and impact.',
+};
+
+// ------------------------------------------------------------
 // Network Page — Collection Flow Steps
 // ------------------------------------------------------------
 export const COLLECTION_FLOW = [
@@ -414,22 +417,22 @@ export const COLLECTION_FLOW = [
 	{
 		step: "03",
 		title: "Transport to Hub",
-		desc: "Oil is transported to the central processing facility using our logistics network.",
+		desc: "Oil is transported to the nearest regional processing facility using our logistics network.",
 	},
 	{
 		step: "04",
 		title: "Quality Check",
-		desc: "Incoming UCO is tested for contamination and sorted before entering the reactor.",
+		desc: "Incoming UCO is tested for contamination and sorted before processing.",
 	},
 	{
 		step: "05",
-		title: "Transesterification",
-		desc: "Controlled chemical reaction with methanol and NaOH/KOH catalyst converts UCO to biodiesel.",
+		title: "Processing",
+		desc: "Oil is refined at our facility into clean, ready-to-use biodiesel.",
 	},
 	{
 		step: "06",
 		title: "Distribution",
-		desc: "Finished B20 or B100 biodiesel is distributed to end users; glycerol is sold as a byproduct.",
+		desc: "Finished B20 biodiesel is distributed to end users; glycerol is sold as a byproduct.",
 	},
 ];
 
@@ -461,18 +464,8 @@ export const PARTNER_TYPES = [
 ];
 
 // ------------------------------------------------------------
-// Process Page — Chemistry details & reaction specs
+// Process Page — Blend options & FAQ
 // ------------------------------------------------------------
-export const REACTION_SPECS = [
-	{ label: "Reaction Type", value: "Transesterification" },
-	{ label: "Feedstock", value: "Used Cooking Oil (UCO)" },
-	{ label: "Co-reactant", value: "Methanol (CH₃OH)" },
-	{ label: "Catalyst", value: "NaOH or KOH" },
-	{ label: "Main Product", value: "Biodiesel (FAME)" },
-	{ label: "Byproduct", value: "Glycerol" },
-	{ label: "Yield", value: "0.85 – 0.95 L per 1 L UCO" },
-];
-
 export const BIODIESEL_BLENDS = [
 	{
 		name: "B5",
@@ -486,12 +479,6 @@ export const BIODIESEL_BLENDS = [
 		use: "Transport fleets — no engine modification needed",
 		highlight: true,
 	},
-	{
-		name: "B100",
-		ratio: "100% Pure Biodiesel",
-		use: "Industrial & compatible diesel engines",
-		highlight: false,
-	},
 ];
 
 export const PROCESS_FAQ = [
@@ -501,15 +488,15 @@ export const PROCESS_FAQ = [
 	},
 	{
 		q: "What happens to the glycerol byproduct?",
-		a: "Glycerol is separated after the reaction and sold to cosmetic, pharmaceutical, and food industries — creating an additional revenue stream.",
+		a: "Glycerol is separated during processing and sold to cosmetic, pharmaceutical, and food industries — creating an additional revenue stream.",
 	},
 	{
 		q: "How is UCO quality controlled?",
-		a: "Each batch of incoming oil is tested for contamination, water content, and free fatty acids before entering the reactor to ensure consistent output quality.",
+		a: "Each batch of incoming oil is tested and sorted before processing to ensure consistent output quality.",
 	},
 	{
 		q: "What is the production capacity?",
-		a: "Our pilot phase targets 500–2,000 liters of biodiesel per month, scaling with the growth of our collection network across Assiut.",
+		a: "Each regional hub targets 500–2,000 liters of biodiesel per month, scaling as our collection network grows.",
 	},
 ];
 
@@ -517,34 +504,34 @@ export const PROCESS_FAQ = [
 // Dashboard Page — Summary KPI cards (top of page)
 // ------------------------------------------------------------
 export const DASHBOARD_SUMMARY_CARDS = [
-	{
-		label: "Total Partners",
-		value: "4",
-		sub: "Active collection agreements",
-		trend: "+2 this month",
-		positive: true,
-	},
-	{
-		label: "UCO Collected",
-		value: "1,240 L",
-		sub: "Cumulative this quarter",
-		trend: "+18% vs last month",
-		positive: true,
-	},
-	{
-		label: "Biodiesel Produced",
-		value: "1,054 L",
-		sub: "At 0.85 L/L yield",
-		trend: "On target",
-		positive: true,
-	},
-	{
-		label: "CO₂ Avoided",
-		value: "2.6 tons",
-		sub: "Estimated this quarter",
-		trend: "~2.5 kg per liter",
-		positive: true,
-	},
+  {
+    label: 'Active Hubs',
+    value: '1',
+    sub: 'Scaling to 3 by Q3–Q4',
+    trend: '+2 planned',
+    positive: true,
+  },
+  {
+    label: 'Q1 Revenue Target',
+    value: 'EGP 624,000',
+    sub: 'Scaling to EGP 1,872,000 by Q3–Q4',
+    trend: '+200% roadmap',
+    positive: true,
+  },
+  {
+    label: 'Q1 Net Profit Target',
+    value: 'EGP 232,140',
+    sub: 'Scaling to EGP 696,420 by Q3–Q4',
+    trend: '+200% roadmap',
+    positive: true,
+  },
+  {
+    label: 'CO₂ Avoided',
+    value: '2.6 tons',
+    sub: 'Estimated this quarter',
+    trend: '~2.5 kg per liter',
+    positive: true,
+  },
 ];
 
 // ------------------------------------------------------------
@@ -563,6 +550,110 @@ export const PARTNER_FORM_TRUST_SIGNALS = [
 		text: "Free UCO collection — no cost to you",
 	},
 	{ icon: "Leaf" as const, text: "Environmental contribution certificate" },
-	{ icon: "Users" as const, text: "Join 10–30 partners across Assiut" },
+	{ icon: "Users" as const, text: "Join our growing partner network" },
 	{ icon: "Globe" as const, text: "Aligned with UN SDG 7, 12 & 13" },
+];
+
+// ------------------------------------------------------------
+// Home Page — Impact teaser (subset shown before the full
+// Impact page). Keep in sync with IMPACT_STATS / real data.
+// ------------------------------------------------------------
+export const HOME_IMPACT_TEASER = {
+	eyebrow: "Our Impact So Far",
+	title: "Numbers that speak for themselves",
+	stats: [
+		{
+			iconName: "Droplet" as const,
+			value: "0.85–0.95L",
+			label: "Biodiesel per 1L waste oil",
+		},
+		{
+			iconName: "Leaf" as const,
+			value: "2.5–3 kg",
+			label: "CO₂ avoided per 1L biodiesel",
+		},
+		{
+			iconName: "Users" as const,
+			value: "1,000+",
+			label: "People reached through outreach",
+		},
+	],
+	ctaLabel: "See Full Impact Report",
+};
+
+// ------------------------------------------------------------
+// Home Page — Latest Updates (manually curated, keep short)
+// ------------------------------------------------------------
+export const LATEST_UPDATES = [
+	{
+		date: "Feb 2025",
+		title: "BioDiesel launches in its first hub",
+		desc: "Enactus Assiut kicks off the pilot collection network with our first group of restaurant and hotel partners.",
+	},
+	{
+		date: "Coming Soon",
+		title: "Second regional hub in planning",
+		desc: "Following our 3-month expansion model, we're scoping the next governorate for a new collection hub.",
+	},
+];
+
+// ------------------------------------------------------------
+// Dashboard — Access control (client-side only, not secure —
+// good enough for an internal pilot-stage demo)
+// ------------------------------------------------------------
+export const DASHBOARD_AUTH = {
+	password: "admin123",
+	sessionKey: "biodiesel_admin_session",
+};
+
+// ------------------------------------------------------------
+// Dashboard — Analytics (Google Analytics visit counter)
+// Set measurementId once the GA4 property is created.
+// Leave null to show a "not connected" placeholder instead
+// of a fabricated number.
+// ------------------------------------------------------------
+export const ANALYTICS_CONFIG: { measurementId: string | null } = {
+	measurementId: null,
+};
+
+// ------------------------------------------------------------
+// Dashboard — Cashback program rules
+// ------------------------------------------------------------
+export const CASHBACK_CONFIG = {
+	pointsPerLiter: 1, // 1 Bio-Point per 10 liters, see FOOTER_CONTENT copy
+	cashbackRate: "5%",
+	minRedeemPoints: 100,
+	tiers: [
+		{ name: "Contributor", minPoints: 0, cashback: "2%" },
+		{ name: "Partner", minPoints: 500, cashback: "5%" },
+		{ name: "Eco-Ambassador", minPoints: 1000, cashback: "8%" },
+	],
+};
+
+// ------------------------------------------------------------
+// Home Page — Partner logos (Social Proof)
+// Add real partner logo file paths/URLs here once provided.
+// Leave empty to hide the section instead of showing placeholders.
+// ------------------------------------------------------------
+export const PARTNER_LOGOS: { name: string; logoUrl: string }[] = [];
+
+// ------------------------------------------------------------
+// Impact Page — Product Carousel captions
+// Images themselves are imported directly in ProductCarousel.tsx
+// from src/assets (Vite requires static imports for bundled assets).
+// Order here must match the import order in that component.
+// ------------------------------------------------------------
+export const PRODUCT_CAROUSEL_ITEMS = [
+	{
+		key: "bio_diesel",
+		title: "B20 Biodiesel Blend",
+		caption:
+			"Our finished biodiesel blend — ready for transport fleets, no engine modification needed.",
+	},
+	{
+		key: "glycerin",
+		title: "Glycerol Byproduct",
+		caption:
+			"A valuable byproduct of the process, sold to cosmetic, pharmaceutical, and food industries.",
+	},
 ];

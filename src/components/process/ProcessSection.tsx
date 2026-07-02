@@ -26,7 +26,7 @@ export const ProcessSection = () => (
               <Icon className="text-brand-primary" />
             </div>
             <h3 className="text-2xl font-extrabold tracking-tight mb-4">{item.title}</h3>
-            <p className="text-slate-500 font-medium mb-6 grow leading-relaxed">
+            <p className="text-slate-500 font-medium mb-6 flex-grow leading-relaxed">
               {item.desc}
             </p>
             <div className="pt-6 border-t border-slate-50 text-xs font-bold text-slate-400 uppercase tracking-widest">

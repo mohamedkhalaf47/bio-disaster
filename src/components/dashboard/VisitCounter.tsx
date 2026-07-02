@@ -43,7 +43,7 @@ export const VisitCounter = () => {
         <>
           <h4 className="text-3xl font-black tracking-tighter text-slate-900">—</h4>
           <p className="text-xs text-slate-400 font-medium mt-1">
-            GA4 property {measurementId} — see live dashboard for exact numbers
+            Watching Numbers Of Visitors In Google Analytics (GA4) Dashboard
           </p>
         </>
       ) : (

@@ -26,7 +26,7 @@ import type {
 // Site-wide info
 // ------------------------------------------------------------
 export const SITE_INFO: SiteInfo = {
-	projectName: "BioDiesel",
+	projectName: "Bio Disaster",
 	tagline: "Turning Waste into Clean Energy.",
 	organization: "Enactus Assiut University",
 	university: "Assiut University",

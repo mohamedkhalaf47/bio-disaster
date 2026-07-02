@@ -5,7 +5,7 @@ const ICONS = { Globe, Camera, Mail };
 
 export const Footer = () => (
   <footer className="bg-slate-950 text-white pt-24 pb-12 px-6 overflow-hidden relative">
-    <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-brand-primary via-brand-secondary to-brand-primary" />
+    <div className="absolute bottom-0 left-0 w-full h-1 bg-linear-to-r from-brand-primary via-brand-secondary to-brand-primary" />
 
     <div className="max-w-7xl mx-auto border-b border-white/5 pb-16 mb-16 grid grid-cols-1 md:grid-cols-3 gap-20">
       <div className="md:col-span-1">

@@ -205,20 +205,38 @@ export const FINANCIAL_DATA: FinancialMonth[] = [
 // Dashboard — Financial Tab (Real quarterly targets, EGP)
 // ------------------------------------------------------------
 export const QUARTERLY_TARGETS = [
-  { quarter: 'Q1', hubs: 1, revenue: 624000, profit: 232140 },
-  { quarter: 'Q2', hubs: 2, revenue: 1248000, profit: 464280 },
-  { quarter: 'Q3–Q4', hubs: 3, revenue: 1872000, profit: 696420 },
+	{ quarter: "Q1", hubs: 1, revenue: 624000, profit: 232140 },
+	{ quarter: "Q2", hubs: 2, revenue: 1248000, profit: 464280 },
+	{ quarter: "Q3–Q4", hubs: 3, revenue: 1872000, profit: 696420 },
 ];
 
 export const DASHBOARD_KPIS = {
-  currentRevenue: { value: 'EGP 624,000', label: 'Q1 Revenue Target', change: '+100% by Q2' },
-  currentProfit: { value: 'EGP 232,140', label: 'Q1 Net Profit Target', change: '+200% by Q3–Q4' },
-  goalStatusPercent: 92,
+	currentRevenue: {
+		value: "EGP 624,000",
+		label: "Q1 Revenue Target",
+		change: "+100% by Q2",
+	},
+	currentProfit: {
+		value: "EGP 232,140",
+		label: "Q1 Net Profit Target",
+		change: "+200% by Q3–Q4",
+	},
+	goalStatusPercent: 92,
 };
 
 export const REVENUE_STREAMS: RevenueStream[] = [
-  { label: 'B20 Commercial', amount: 'EGP 468,000', percentWidth: '75%', colorVariant: 'primary' },
-  { label: 'Glycerin Products', amount: 'EGP 156,000', percentWidth: '25%', colorVariant: 'accent' },
+	{
+		label: "B20 Commercial",
+		amount: "EGP 468,000",
+		percentWidth: "75%",
+		colorVariant: "primary",
+	},
+	{
+		label: "Glycerin Products",
+		amount: "EGP 156,000",
+		percentWidth: "25%",
+		colorVariant: "accent",
+	},
 ];
 
 // ------------------------------------------------------------
@@ -394,10 +412,10 @@ export const BENEFICIARIES = [
 // Impact Page — Growth Roadmap (Hub expansion + financial scaling)
 // ------------------------------------------------------------
 export const GROWTH_ROADMAP_INTRO = {
-  eyebrow: 'Where We\'re Headed',
-  title: 'A clear path to scale',
-  description:
-    'Our roadmap isn\'t just ambition — it\'s a quarter-by-quarter plan for expanding our hub network and impact.',
+	eyebrow: "Where We're Headed",
+	title: "A clear path to scale",
+	description:
+		"Our roadmap isn't just ambition — it's a quarter-by-quarter plan for expanding our hub network and impact.",
 };
 
 // ------------------------------------------------------------
@@ -504,34 +522,34 @@ export const PROCESS_FAQ = [
 // Dashboard Page — Summary KPI cards (top of page)
 // ------------------------------------------------------------
 export const DASHBOARD_SUMMARY_CARDS = [
-  {
-    label: 'Active Hubs',
-    value: '1',
-    sub: 'Scaling to 3 by Q3–Q4',
-    trend: '+2 planned',
-    positive: true,
-  },
-  {
-    label: 'Q1 Revenue Target',
-    value: 'EGP 624,000',
-    sub: 'Scaling to EGP 1,872,000 by Q3–Q4',
-    trend: '+200% roadmap',
-    positive: true,
-  },
-  {
-    label: 'Q1 Net Profit Target',
-    value: 'EGP 232,140',
-    sub: 'Scaling to EGP 696,420 by Q3–Q4',
-    trend: '+200% roadmap',
-    positive: true,
-  },
-  {
-    label: 'CO₂ Avoided',
-    value: '2.6 tons',
-    sub: 'Estimated this quarter',
-    trend: '~2.5 kg per liter',
-    positive: true,
-  },
+	{
+		label: "Active Hubs",
+		value: "1",
+		sub: "Scaling to 3 by Q3–Q4",
+		trend: "+2 planned",
+		positive: true,
+	},
+	{
+		label: "Q1 Revenue Target",
+		value: "EGP 624,000",
+		sub: "Scaling to EGP 1,872,000 by Q3–Q4",
+		trend: "+200% roadmap",
+		positive: true,
+	},
+	{
+		label: "Q1 Net Profit Target",
+		value: "EGP 232,140",
+		sub: "Scaling to EGP 696,420 by Q3–Q4",
+		trend: "+200% roadmap",
+		positive: true,
+	},
+	{
+		label: "CO₂ Avoided",
+		value: "2.6 tons",
+		sub: "Estimated this quarter",
+		trend: "~2.5 kg per liter",
+		positive: true,
+	},
 ];
 
 // ------------------------------------------------------------
@@ -613,7 +631,7 @@ export const DASHBOARD_AUTH = {
 // of a fabricated number.
 // ------------------------------------------------------------
 export const ANALYTICS_CONFIG: { measurementId: string | null } = {
-	measurementId: null,
+	measurementId: "G-X7DYESY8J6",
 };
 
 // ------------------------------------------------------------
